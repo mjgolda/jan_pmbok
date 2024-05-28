@@ -6,5 +6,7 @@ function changeLanguage() {
  window.onload = function() {
     var url = window.location.href;
     var filename = url.substring(url.lastIndexOf('/')+1);
+     if(filename == "")
+         filename = "index.html";
     document.getElementById('language-select').value = filename;
 }
